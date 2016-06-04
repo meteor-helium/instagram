@@ -1,0 +1,20 @@
+<template name="configureLoginServiceDialogForInstagram">
+  <p>
+    First, you'll need to register your app on Instagram. Follow these steps:
+  </p>
+  <ol>
+    <li>
+      Visit <a href="https://www.instagram.com/developer/register/" target="_blank">https://www.instagram.com/developer/register/</a>
+    </li>
+    <li>
+      Click "Register Your Application" button.
+    </li>
+    <li>
+      Fill in the required details and register the app.
+    </li>
+    <li>
+      Create a Redirect URI entry with the following value.<br>
+      {{siteUrl}}_oauth/instagram
+    </li>
+  </ol>
+</template>

@@ -32,7 +32,7 @@ Instagram.requestCredential = function(options, credentialRequestCompleteCallbac
     '&redirect_uri=' + OAuth._redirectUri('instagram', config) +
     '&response_type=code' +
     '&state=' + OAuth._stateParam(loginStyle, credentialToken, options && options.redirectUrl) +
-    '&scope=' scope
+    '&scope=' + scope;
 
   OAuth.launchLogin({
     loginService: "instagram",

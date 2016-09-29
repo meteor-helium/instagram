@@ -27,7 +27,8 @@ Instagram.requestCredential = function(options, credentialRequestCompleteCallbac
     'https://api.instagram.com/oauth/authorize/?client_id=' + config.clientId +
     '&redirect_uri=' + OAuth._redirectUri('instagram', config) +
     '&response_type=code' +
-    '&state=' + OAuth._stateParam(loginStyle, credentialToken, options && options.redirectUrl);
+    '&state=' + OAuth._stateParam(loginStyle, credentialToken, options && options.redirectUrl) +
+    '&scope=' options.permissions.join('+');
 
   OAuth.launchLogin({
     loginService: "instagram",

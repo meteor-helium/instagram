@@ -23,7 +23,7 @@ Instagram.requestCredential = function(options, credentialRequestCompleteCallbac
 
   var loginStyle = OAuth._loginStyle('instagram', config, options);
   
-  let scope = "basic";
+  var scope = "basic";
   if (options && options.requestPermissions)
     scope = options.requestPermissions.join('+');
 

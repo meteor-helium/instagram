@@ -22,12 +22,17 @@ Instagram.requestCredential = function(options, credentialRequestCompleteCallbac
   var credentialToken = Random.secret();
 
   var loginStyle = OAuth._loginStyle('instagram', config, options);
+  
+  var scope = "basic";
+  if (options && options.requestPermissions)
+    scope = options.requestPermissions.join('+');
 
   var loginUrl =
     'https://api.instagram.com/oauth/authorize/?client_id=' + config.clientId +
     '&redirect_uri=' + OAuth._redirectUri('instagram', config) +
     '&response_type=code' +
-    '&state=' + OAuth._stateParam(loginStyle, credentialToken, options && options.redirectUrl);
+    '&state=' + OAuth._stateParam(loginStyle, credentialToken, options && options.redirectUrl) +
+    '&scope=' + scope;
 
   OAuth.launchLogin({
     loginService: "instagram",

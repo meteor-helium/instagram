@@ -1,6 +1,6 @@
 Package.describe({
   name: 'helium:instagram',
-  version: '1.0.0',
+  version: '1.1.0',
   summary: 'Instagram OAuth flow',
   git: 'https://github.com/meteor-helium/instagram.git',
   documentation: 'README.md'
